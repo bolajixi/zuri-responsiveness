@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zuri: Responsiveness</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            background-color: hsl(0, 100%, 74%);
+            background-image: url("bg-intro-desktop.png");
+        }
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+            width: 1440px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(600px, auto);
+            grid-gap: 1em;
+        }
+        .container > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .textual {
+            width: 60%;
+            color: white;
+        }
+        .trial {
+            height:  60px;
+            width: 86%;
+            border-radius: 12px;
+            background-color: hsl(248, 32%, 49%);
+            color: white;
+            margin: 15px;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 2px 7px rgba(58, 58, 58, 0.5);
+        }
+        .form {
+            margin: 5px;
+            height: auto;
+            width: 80%;
+            border-radius: 12px;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 7px rgba(58, 58, 58, 0.5);
+        }
+        input[type=text], input[type=email], input[type=password] {
+            border: 2px solid hsl(246, 25%, 77%);
+        }
+        input {
+            margin: 10px;
+            width: 90%;
+            height: 50px;
+            border-radius: 12px;
+            font-size: 16px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        input:active {
+            border: 2px solid hsl(249, 10%, 26%);
+        }
+        button {
+            margin: 10px;
+            border-radius: 12px;
+            width: 95%;
+            height: 60px;
+            font-size: 16px;
+            background-color: hsl(154, 59%, 51%);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div>
+                <div class="textual">
+                    <h1>Learn to code by watching others</h1>
+                    <p>See how experieced developers solve problems in real time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+                </div>
+            </div>
+            <div style="height: 680px;">
+                <div class="trial">
+                    <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+                </div>
+                <form class="form">
+                    <input type="text" name="fname" id="" placeholder="First Name" required>
+                    <input type="text" name="lname" id="" placeholder="Last Name" required>
+                    <input type="email" name="Email" id="" placeholder="Email" required>
+                    <input type="password" name="password" id="" placeholder="Password" required>
+                    <button type="submit">CLAIM YOUR FREE TRIAL</button>
+                    <p style="color:hsl(246, 25%, 77%);">By clicking the button you are agreeing to out <strong style="color: hsl(0, 100%, 74%);">Terms and Services</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
